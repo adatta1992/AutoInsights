@@ -16,7 +16,7 @@ This project aimed to benchmark various sentiment analysis approaches, summarizi
 ### 💻 Interactive Sentiment Results Dashboard
 
 The results of the sentiment analysis performed on the r/nba subreddit data can be found in the provided Streamlit dashboard below.  
-Click here to view: **[LINK TO DASHBOARD HERE]**
+Click here to view: https://sentanalysisresults.streamlit.app/
 
 ---
 
