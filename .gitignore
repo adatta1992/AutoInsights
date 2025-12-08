@@ -1,0 +1,9 @@
+# Ignore the virtual environment directory
+.venv/
+
+# Ignore output directories
+models/
+results/
+
+# Ignore pycache
+__pycache__/
