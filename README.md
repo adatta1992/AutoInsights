@@ -34,6 +34,8 @@ Data Source Details:
 1.  **GoEmotions dataset:** Sourced from Kaggle and used for fine-tuning the BERT model.
 2.  **2019 Reddit Comments dataset:** Sourced from Kaggle and used to create the validation set from comments sourced from the r/nba subreddit.
 
+Both raw datasets can be found in the data folder within this directory.
+
 ---
 
 ### 💻 Repository Structure
