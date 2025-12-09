@@ -9,7 +9,7 @@ Team Members: Aabir Datta <aabir@umich.edu>
 
 ### 📊 Benchmarking Sentiment Analysis for Reddit Data
 
-This project aimed to benchmark various sentiment analysis approaches, summarizing their performance and limitations to identify the most effective method for analyzing Reddit data. The insights generated from this investigation can help enable more informed strategic decisions on whether investing in a comprehensive and extensive social media monitoring project, as well as commercial use of social media data, is a value added proposition. The scripts and methodology provided in this repository are modular and adaptable, allowing researchers to easily apply and benchmark these sentiment approaches on their own custom Reddit datasets for domain-specific analyses.
+This project aimed to benchmark various sentiment analysis approaches, summarizing their performance and limitations to identify the most effective method for analyzing Reddit data. The insights generated from this investigation can help enable more informed strategic decisions on whether investing in a comprehensive and extensive social media monitoring project, as well as commercial use of social media data, is a value added proposition. The benchmarking results can be found in the model_benchmarking notebook within this repo. The scripts and methodology provided in this repository are modular and adaptable, allowing researchers to easily apply and benchmark these sentiment approaches on their own custom Reddit datasets for domain-specific analyses.
 
 ---
 
@@ -22,8 +22,8 @@ Click here to view: https://sentanalysisresults.streamlit.app/
 
 ### ✨ Key Findings
 
-* **Top Performer:** The GPT 5.1 model achieved the highest F1-score of **0.76** on the validation set, demonstrating robustness in its ability to handle Reddit slang and noise.
-* **Best bang-for-buck:** The fine-tuned BERT model achieved a highly competitive F1-score of **0.68** on the test set with significantly lower inference cost to the GPT model.
+* **Top Performer:** The GPT 5.1 model achieved the highest F1-score of **0.76** on the validation set with a few-shot approach, demonstrating robustness in its ability to handle Reddit slang and nuance.
+* **Best bang-for-buck:** The fine-tuned BERT model achieved a highly competitive F1-score of **0.68** on the test set with significantly lower inference cost to the GPT model. It failed to generalize well on the validation set however, suggesting that this approach works best when you can fine-tune the model with domain specific labelled datasets.
 * **Quick Insights:** The VADER approach is the best model for quick, high-level sentiment insights at the cost of worse sentiment classification performance.
 
 ---
@@ -75,7 +75,7 @@ All dependencies can be found in the **`requirements.txt`** file.
 
 To replicate this analysis for your custom Reddit datasets, follow these steps:
 
-1.  Use the `create_validation_set` function in `create_validation_set.py` to create a dataset for your subreddit of interest using the 2019 Reddit data.
-2.  Use the `sent_analysis_vader` function in `model_vader.py` to make predictions using VADER.
+1.  Import and use the `create_validation_set` function in `create_validation_set.py` to create a dataset for your subreddit of interest using the 2019 Reddit data.
+2.  Import and use the `sent_analysis_vader` function in `model_vader.py` to make predictions using VADER.
 3.  Run the `model_bert.py` script to create and save a fine-tuned BERT model trained on the GoEmotions dataset. Load this saved model to make sentiment predictions using BERT.
 4.  Set your OpenAI API key in the **`.env`** file. Use the `sent_analysis_openai` function in `model_openaiapi.py` to make sentiment predictions using the OpenAI API/GPT 5.1.
