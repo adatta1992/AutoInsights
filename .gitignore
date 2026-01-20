@@ -7,3 +7,9 @@ results/
 
 # Ignore pycache
 __pycache__/
+
+# .env
+.env
+
+#.DS_Store
+.DS_Store
